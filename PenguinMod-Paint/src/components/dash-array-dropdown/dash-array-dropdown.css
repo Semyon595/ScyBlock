@@ -1,0 +1,111 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+
+.mod-unselect {
+    user-select: none;
+}
+
+.dash-array-dropdown {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 2rem;
+}
+.dash-array-dropdown line {
+    stroke: $text-primary;
+}
+
+.dash-array-context-menu {
+    display: block;
+}
+
+.table {
+    width: 9rem;
+    height: 12rem;
+    border: 1px solid $form-border;
+    border-radius: $form-radius;
+    margin: 8px 8px 0 8px;
+    overflow-y: auto;
+    background-color: $ui-primary;
+}
+.item {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $form-border;
+    border-radius: $form-radius;
+    background: $input-background;
+}
+.readout {
+    font-size: 0.65rem !important;
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    -moz-appearance: textfield;
+    font: inherit;
+    font-weight: bold;
+}
+.readout::-webkit-outer-spin-button,
+.readout::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.row {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 8px;
+    cursor: pointer;
+}
+.button > img {
+    width: 1.5rem;
+    height: 1.5rem;
+}

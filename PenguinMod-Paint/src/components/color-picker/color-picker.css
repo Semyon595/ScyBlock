@@ -1,0 +1,152 @@
+@import "../../css/units";
+@import "../../css/colors";
+
+/* Popover styles */
+/* body is for specificity to override some addons that set a lower z-index */
+body :global(.Popover) {
+    /* should be above menu bar */
+    z-index: 500;
+}
+
+:global(.Popover-body) {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, .3);
+}
+
+:global(.Popover-tipShape) {
+    fill: white;
+    stroke: #ddd;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.swatch-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.row-header {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 0.65rem;
+    color: $text-primary;
+    margin: 8px 8px 0 8px;
+}
+[theme="dark"] .row-header {
+    color: #ccc;
+}
+
+.label-name {
+    font-weight: bold;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin: 8px;
+}
+[theme="dark"] .divider {
+    border-color: #333;
+}
+
+.swap-button {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.swatches {
+    margin: 8px;
+}
+
+.swatch {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+}
+[theme="dark"] .swatch {
+    border-color: $form-border;
+}
+
+.large-swatch-icon {
+    width: 1.75rem;
+    margin: auto;
+}
+
+.large-swatch {
+    width: 2rem;
+    height: 2rem;
+}
+
+.active-swatch {
+    border: 1px solid $looks-secondary;
+    box-shadow: 0px 0px 0px 3px $looks-transparent;
+}
+
+.swatch-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.inactive-gradient {
+    filter: saturate(0%);
+}
+
+.gradient-picker-row {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 8px;
+    user-select: none;
+}
+
+[dir="ltr"] .gradient-picker-row > img + img {
+    margin-left: calc(2 * $grid-unit);
+}
+
+[dir="rtl"] .gradient-picker-row > img + img {
+    margin-right: calc(2 * $grid-unit);
+}
+
+[dir="rtl"] .gradient-swatches-row {
+    flex-direction: row-reverse;
+}
+
+.picker-row {
+    display: flex;
+    margin: 8px;
+    margin-top: 12px;
+    width: 150px;
+    align-items: center;
+}
+.picker-row .picker-color {
+    border: none;
+    border-radius: 0;
+    padding: 0 0.2rem;
+    width: 3rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.picker-row .picker-text {
+    box-sizing: border-box;
+    width: 100%;
+}
+[dir="ltr"] .picker-row .picker-text {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+[dir="rtl"] .picker-row .picker-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
